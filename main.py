@@ -6,7 +6,7 @@ import json
 print('Enter Year:')
 year = input()
 
-url = 'https://www.billboard.com/charts/year-end/{}/hot-christian-songs'.format(year)
+url = 'https://www.billboard.com/charts/year-end/{}/'.format(year)
 hdr = {'User-Agent': 'Mozilla/5.0'}
 req = Request(url, headers = hdr)
 read_content = urlopen(req)
@@ -45,7 +45,7 @@ for i in range(100):
 
 	#print(song_uni + artist_uni)
 
-	token = 'PezDUpBEmoqm9l3nnULjAhP8bdAt6ZsfZZ-ds9A4KChT4tv3BWIBcqnSR62Sl5sC'
+	token = ''
 	api_url = 'https://api.genius.com/search?q={0}&access_token={1}&per_page=1'.format(artist_uni + '%20' + song_uni, token)
 	hdr = {'User-Agent': 'Mozilla/5.0'}
 	req = Request(api_url, headers = hdr)
@@ -95,5 +95,5 @@ for url in lyric_url:
 #for i in lyrics_pool:
 #	lyrics_pool_str += ('{} ').format(i)
 
-with open('C:/Scripts/Python/Jesus/file.txt', 'w', encoding='utf-8') as output:
+with open('file.txt', 'w', encoding='utf-8') as output:
 	output.write(lyrics_pool_str)
