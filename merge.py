@@ -1,6 +1,6 @@
 import glob
 
-read_files = glob.glob("C:/Scripts/Python/Jesus/*.txt")
+read_files = glob.glob("*.txt")
 
 with open("result.txt", "wb") as outfile:
     for f in read_files:
